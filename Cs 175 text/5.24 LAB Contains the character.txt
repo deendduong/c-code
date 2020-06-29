@@ -1,0 +1,30 @@
+//5.24 LAB Contains the character
+
+#include <iostream>
+#include <vector>
+#include <string>
+using namespace std;
+
+int main() {
+    int n;
+    vector<string> ve;
+    string data;
+    cin >> n;
+    for (int i = 0; i < n; ++i) {
+        cin >> data;
+        ve.push_back(data);
+    }
+    char charac;
+    cin >> charac;
+    for (int i = 0; i < n; ++i) {
+        int count = 0;
+        for (int l = 0; l < ve[i].size(); ++l) {
+            if (ve[i][l] == charac)
+                ++count;
+        }
+        if (count > 0) {
+            cout << ve[i] << endl;
+        }
+    }
+    return 0;
+}
