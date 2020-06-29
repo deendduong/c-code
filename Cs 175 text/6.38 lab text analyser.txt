@@ -1,0 +1,57 @@
+//6.38 LAB: Warm up: Text analyzer & modifier
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int GetNumOfCharacters(string usrStri)
+
+{
+int count = 0;
+for (count = 0; usrStri[count]; ++count);
+return count;
+}
+void OutputWithoutWhitespace(string& usrStri)
+
+{
+string str = "";
+for (int num = 0; num < usrStri.size(); ++num)
+
+{
+
+if (usrStri.at(num) != ' ')
+
+{
+str = str + usrStri.at(num);
+
+}
+
+}
+cout<< str;
+
+}
+
+
+int main() {
+
+string usrStri;
+
+
+cout << "Enter a sentence or phrase:\n";
+cout << endl;
+
+getline(cin, usrStri);
+
+cout << "You entered: " << usrStri;
+cout <<"\n" << endl;
+
+
+cout << "Number of characters: " << GetNumOfCharacters(usrStri) << endl;
+
+cout << "String with no whitespace: ";
+
+
+OutputWithoutWhitespace(usrStri);
+cout << endl;
+   return 0;
+}
