@@ -1,0 +1,48 @@
+//5.27 LAB Warm up People's weights (Vectors)
+
+#include <iostream>
+#include <vector>
+#include <iomanip>
+using namespace std;
+int main()
+{
+double n;
+vector<double> v;
+double total=0;
+double average,max;
+cout<<fixed<<setprecision(2);
+  
+for(int i=1;i<=5;i++)
+{
+
+cout<<"Enter weight "<<i<<":"<<endl;
+cin>>n;
+v.push_back(n);
+}
+  
+int size=v.size();
+cout<<"You entered: ";
+for (int i=0;i<size;i++)
+{
+cout<<v[i]<<" ";
+}
+cout<<endl;
+cout<<endl;
+for (int i=0;i<size;i++)
+{
+total=total+v[i];
+}
+average=total/5;
+cout<<"Total weight: "<<total<<endl;
+cout<<"Average weight: "<<average<<endl;
+max=v[0];
+for (int i=1;i<size;i++)
+{
+if(v[i]>max)
+{
+max=v[i];
+}
+}
+cout<<"Max weight: "<<max<<endl;
+return 0;
+}
